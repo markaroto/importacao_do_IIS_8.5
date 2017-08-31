@@ -1,0 +1,11 @@
+
+commando de backup
+
+msdeploy -verb:sync -source:webServer60 -dest:package=E:\site-1.zip > WebDeployPackage.log
+
+msdeploy -verb:sync -source:webserver60 -dest:archivedir=E:\bkpsite,encryptpassword=C@s@ > sitebkp.log
+
+
+Comando de recuperação 
+
+msdeploy -verb:sync -source:archivedir=E:\site,encryptPassword=C@s@ -dest=webserver60 > insuflating.log
